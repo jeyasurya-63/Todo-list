@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO-LIST</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="main-div">
+      <h1>STUDENT FORM</h1>
+      <form>
+        <div class="input-fileds">
+          <div class="name-div">
+            <label for="name">Name</label>
+            <input
+              name="name"
+              type="text"
+              id="name"
+              placeholder="Enter Your Name ...."
+            />
+          </div>
+          <div class="age-div">
+            <label for="age">Age</label>
+            <input
+              name="age"
+              type="number"
+              id="age"
+              placeholder="Enter Your Age..."
+            />
+          </div>
+          <div class="gender-div">
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" value="Male" /> Male
+            <input type="radio" name="gender" value="Female" /> Female
+            <input type="radio" name="gender" value="Others" /> Others
+          </div>
+          <div class="course-div">
+            <label for="course">Course</label>
+            <select id="course" name="course">
+              <option value="Java">Java</option>
+              <option value="python">python</option>
+              <option value="Java Script">Java Script</option>
+              <option value="Docker">Docker</option>
+            </select>
+          </div>
+          <div class="email-div">
+            <label for="email">Email</label>
+            <input
+              name="email"
+              type="email"
+              id="email"
+              placeholder="Enter Your Email..."
+            />
+          </div>
+          <div class="btn-div">
+            <button id="btn">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="table-div">
+      <table border="1" class="head-div" id="userTable">
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Age</td>
+            <td>course</td>
+            <td>Gender</td>
+            <td>Email</td>
+            <td>Action</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>Age</td>
+            <td>course</td>
+            <td>Gender</td>
+            <td>Email</td>
+            <td>Action</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      let form = document.querySelector("form");
+      const table = document
+        .getElementById("userTable")
+        .getElementsByTagName("tbody")[0];
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // const name = document.getElementById("name").value
+        // const email = document.getElementById("email").value
+        // const number = document.getElementById("number").value
+        // const address = document.getElementById("address").value
+        // const gender = document.getElementById("gender").value
+        // const dob = document.getElementById("dob").value
+        // const education = document.querySelector('input[name="education"]:checked')?.value
+        // const hobbies = document.querySelectorAll('input[name="hobbies"]:checked')
+
+        // let hobbiesData = []
+
+        // // hobbies[0].value
+
+        // for (let i = 0; i < hobbies.length; i++) {
+        //     // console.log("hobbies[i].value", hobbies[i].value)
+        //     hobbiesData.push(hobbies[i].value)
+        // }
+
+        const formData = new FormData(form);
+
+        let user = {
+          name: formData.get("name"),
+          age: formData.get("age"),
+
+          course: formData.get("course"),
+          gender: formData.get("gender"),
+          email: formData.get("email"),
+        };
+
+        const row = table.insertRow();
+
+        row.innerHTML = `
+                <td>${user.name}</td>
+                <td>${user.age}</td>
+                <td>${user.course}</td>
+                <td>${user.gender}</td>
+                <td>${user.email}</td>
+                
+                
+                
+                
+                <td>
+                    <button onclick="deleteBtn(this)">Delete</button>    
+                </td>
+            `;
+
+        form.reset();
+      });
+
+      function deleteBtn(btn) {
+        btn.parentNode.parentNode.remove();
+      }
+    </script>
+  </body>
+</html>

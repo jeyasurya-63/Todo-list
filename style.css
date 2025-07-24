@@ -1,0 +1,131 @@
+body,
+h1 {
+  margin: 0px;
+  background-color: lightgray;
+}
+.main-div {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0px;
+}
+.input-fileds {
+  background-color: #fff;
+  width: 350px;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.name-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0px;
+}
+.name-div label {
+  font-weight: bold;
+  font-size: larger;
+}
+.name-div input {
+  width: 80%;
+  border: 1px gray solid;
+  padding: 8px;
+  border-radius: 8px;
+}
+.age-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0px;
+}
+.age-div label {
+  font-weight: bold;
+  font-size: larger;
+}
+.age-div input {
+  width: 80%;
+  border: 1px gray solid;
+  padding: 8px;
+  border-radius: 8px;
+}
+.gender-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 10px 0px;
+}
+.gender-div label {
+  font-weight: bold;
+  font-size: larger;
+  width: 20%;
+}
+
+.course-div {
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.course-div label {
+  font-weight: bold;
+  font-size: larger;
+}
+.course-div select {
+  width: 80%;
+  border: 1px gray solid;
+  padding: 8px;
+  border-radius: 8px;
+}
+.email-div {
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.email-div label {
+  font-weight: bold;
+  font-size: larger;
+}
+.email-div input {
+  width: 80%;
+  border: 1px gray solid;
+  padding: 8px;
+  border-radius: 8px;
+}
+.btn-div {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+}
+.btn-div button {
+  background-color: orchid;
+  color: black;
+  padding: 5px 30px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: larger;
+  cursor:pointer;
+}
+.table-div {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.head-div {
+  width: 50%;
+  background-color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
